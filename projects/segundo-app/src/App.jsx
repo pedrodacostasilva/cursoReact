@@ -25,8 +25,11 @@ function App() {
 
       {nutri.map((i) => {
         return (
-          <article key={i.id}>
-
+          <article key={i.id} className="post">
+            <h2 className="titulo">{i.titulo}</h2>
+            <img src={i.capa} alt={i.titulo} className="capa"/>
+            <p className="subtitulo">{i.subtitulo}</p>
+            <a href="#" className="botao">Acessar</a>
           </article>
         )
       })}
