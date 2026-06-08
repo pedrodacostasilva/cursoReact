@@ -1,17 +1,30 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [input, setInput] = useState("");
-  const [tarefas, setTarefas] = useState(["Pagar", "Conta"]);
+  const [tarefas, setTarefas] = useState(["Pagar boleto", "Tomar água"]);
+
+
+  useEffect(() => {
+    const tarefaStorage = localStorage.getItem('@tarefa')
+
+    if(tarefaStorage){
+      setTarefas(JSON.parse(tarefaStorage))
+    }
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem('@tarefa', JSON.stringify(tarefas));
+  }, [tarefas]);
 
   function register(e) {
     e.preventDefault();
 
-    if (input === ''){
-      alert("Coloque uma tarefa")
+    if (input === "") {
+      alert("Coloque uma tarefa");
     } else {
       setTarefas([...tarefas, input]);
-      setInput('');
+      setInput("");
     }
   }
 
