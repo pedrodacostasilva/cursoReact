@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
 }
 .container {
     display: flex;
@@ -20,4 +21,48 @@ header{
     width: 100%;
     background-color: #4c89e3;
     color: #fff;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+    background-color: #FFF;
+    border-radius: 7px;
+    border-width: 1px;
+    margin: 8px;
+    padding: 10px;
+}
+
+.titulo {
+    font-size: 1.8rem;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    padding: 0px 60px;
+    text-align: center;
+}
+
+.subtitulo {
+    margin: 5px 0px;
+}
+
+.botao{
+    margin-top: 10px;
+    height: 40px;
+    background: none;
+    border-radius: 5px;
+    color: #4c89e3;
+    border: 2px solid #4c89e3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition-duration: 0.4s;
+}
+
+.botao:hover{
+    background-color: #4c89e3;
+    color: #FFF;
 }
